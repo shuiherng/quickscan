@@ -63,7 +63,6 @@ class PageExtractor:
 		return warped
 
 	def reverse_skew(self, image):
-		print(self.src_img_dims)
 		m_inv = cv2.getPerspectiveTransform(self.dst, self.src)
 		unskewed = cv2.warpPerspective(image, m_inv, (self.src_img_dims[1], self.src_img_dims[0]))
 
